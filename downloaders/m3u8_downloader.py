@@ -54,6 +54,3 @@ class Downloader():
         pool.join()  # waiting for the downloads to complete
         os.system(('ffmpeg -f concat -safe 0 -i download_parts/parts -acodec copy -vcodec copy "{}//{}.mp4"'.format(os.getcwd(), self.title)))
         clean_junk()
-
-
-
